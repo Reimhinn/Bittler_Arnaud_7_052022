@@ -1,0 +1,133 @@
+header {
+  text-align: center;
+}
+
+.logo {
+  width: 200px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+
+.form-control {
+  background-color: rgba(218, 209, 209, 0.322);
+  height: 50px;
+  margin-top: 10px;
+  border-radius: 3px;
+  background-color: #E7E7E7;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.relative-search {
+  position: relative;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: none;
+  border-color: brown;
+}
+
+.search-icon {
+  font-size: 22px;
+  position: absolute;
+  top: 13px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.word-selected {
+    background-color: #3282F7;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    border-radius: 5px;
+    padding: 12px;
+}
+
+.delete-cross {
+  font-size: 14px;
+  margin-left: 7px;
+  cursor: pointer;
+}
+
+.buttons-container {
+  margin-top: 22px;
+  margin-bottom: -20px;
+}
+
+.btn {
+  margin-right: 7px;
+  border-radius: 5px;
+  height: 50px;
+  width: 140px;
+  color: white;
+  text-align: start;
+}
+
+
+.first-button, .first-button:hover, .first-button:focus  {
+  background-color :#3282F7;
+}
+
+.first-button:hover, .first-button:focus, .second-button:hover, .second-button:focus, .third-button:hover, .third-button:focus {
+  opacity: 0.8;
+}
+
+.second-button, .second-button:hover, .second-button:focus {
+  background-color: #68D9A4;
+}
+
+.third-button, .third-button:hover, .third-button:focus {
+  background-color: #ED6454;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap ;
+}
+
+.card {
+  margin-top: 40px;
+  margin-right: 40px;
+  height: 350px;
+  width: calc(33% - 23px);
+  transition: all 250ms;
+}
+
+.card:nth-child(3n+0) {
+  margin-right: 0;
+}
+
+.card:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.card-top {
+ background-color: #C7BEBE;
+ height: 50%;
+}
+
+.card-body {
+  background-color: #E7E7E7;
+  display: flex;
+}
+
+.card-body-left {
+  width: 50%;
+  flex-grow: 1;
+}
+
+.card-title, .card-time {
+  font-size: 16px;
+}
+
+.card-recipe, .card-instructions {
+  font-size: 14px;
+}
+
+.card-time {
+  text-align: right;
+}

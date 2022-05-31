@@ -1,0 +1,6 @@
+tout faire à base de module :
+
+fetch
+dynamiser les cards
+créer autre branche avant de commener le filtre
+faires les tags/dropdown
