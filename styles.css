@@ -55,33 +55,57 @@ header {
 .buttons-container {
   margin-top: 22px;
   margin-bottom: -20px;
-}
-
-.btn {
-  margin-right: 7px;
-  border-radius: 5px;
-  height: 50px;
-  width: 140px;
   color: white;
+  display: flex;
+}
+
+.button {
+  border-radius: 0px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  height: 50px;
+  width: 110px;
   text-align: start;
+  border: none;
+  padding-left: 10px;
+  color: white;
+  outline: none;
 }
 
+.button::placeholder {
+  color: white;
+}
 
-.first-button, .first-button:hover, .first-button:focus  {
+.first-button, .first-button:focus, .first-dropdown {
   background-color :#3282F7;
+  border-color: #3282F7;
 }
 
-.first-button:hover, .first-button:focus, .second-button:hover, .second-button:focus, .third-button:hover, .third-button:focus {
-  opacity: 0.8;
-}
-
-.second-button, .second-button:hover, .second-button:focus {
+.second-button, .second-dropdown {
   background-color: #68D9A4;
 }
 
-.third-button, .third-button:hover, .third-button:focus {
+.third-button, .third-dropdown {
   background-color: #ED6454;
 }
+
+.dropdown {
+  margin-right: 7px;
+  width: 40px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.dropdown:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
 
 .cards {
   display: flex;
@@ -118,6 +142,7 @@ header {
 
 .card-body-left {
   flex-grow: 1;
+  overflow: hidden;
 }
 
 .card-body-right, .card-body-left {
@@ -147,7 +172,13 @@ header {
 }
 
 .card-title {
-  white-space: nowrap;
+  overflow: hidden;
+  white-space: break-spaces;
+}
+
+.card-ingredient-block {
+  display: flex;
+  font-size: 10px;
 }
 
 .card-instructions-block {
@@ -160,8 +191,20 @@ header {
 
 }
 
-.ingredient {
-  font-size: 10px;
+.ingredient, .quantity, .unit {
   margin: 0;
+}
+
+.ingredient {
   font-weight: bold;
 }
+
+.quantity {
+  margin-left: 3px;
+}
+
+.quantity, .unit {
+  font-weight: 500;
+}
+
+

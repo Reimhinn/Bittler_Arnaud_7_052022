@@ -13,3 +13,16 @@ function showCards() {
 
 showCards()
 
+const dropdowns = document.querySelectorAll('.dropdown')
+
+dropdowns.forEach(dropdown => {
+  dropdown.addEventListener('click', event => {
+    const hasFirstClass = event.target.classList.contains('first-dropdown')
+    console.log(hasFirstClass)
+  })
+
+});
+
+function displayList () {
+
+}

@@ -1,8 +1,6 @@
 tout faire à base de module :
 
-mettre les compléments d'ingrédient
-régler le problème de taille du titre
-créer autre branche avant de commencer le filtre
 faires les tags/dropdown
+créer autre branche avant de commencer le filtre
 faire le 2 versions du filtre
 faire le responsive
