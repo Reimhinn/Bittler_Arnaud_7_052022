@@ -4,3 +4,10 @@ faires les tags/dropdown
 créer autre branche avant de commencer le filtre
 faire le 2 versions du filtre
 faire le responsive
+
+
+questions :
+
+scroll y ?
+responsive ?
+fetch ?

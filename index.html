@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -24,7 +26,7 @@
 
   <body class="container">
     <header>
-      <a href="."><img class="logo" src="./logo.png" /></a>
+      <a href="."><img class="logo" src="./logo.png"/></a>
       <div class="relative-search">
         <input
           class="form-control search-bar"
@@ -36,19 +38,54 @@
     </header>
 
     <main>
-
-      <span class="word-selected">Mot selectionné<i class="fa-regular fa-circle-xmark delete-cross"></i></span>
+      <span class="word-selected"
+        >Mot selectionné<i class="fa-regular fa-circle-xmark delete-cross"></i
+      ></span>
 
       <div class="buttons-container">
-        <input placeholder="Ingrédients" type="text" class="button first-button"><div class="dropdown first-dropdown"><i class="fa-solid fa-angle-down dropdown-arrow"></i></div>
-        <input placeholder="Appareils" type="text" class="button second-button"><div class="dropdown second-dropdown"><i class="fa-solid fa-angle-down dropdown-arrow"></i></div>
-        <input placeholder="Ustensiles" type="text" class="button third-button"><div class="dropdown third-dropdown"><i class="fa-solid fa-angle-down dropdown-arrow"></i></div>
+        <div class="button-container ingredient-button-container">
+          <div class="dropdown-flex">
+            <input
+              placeholder="Ingrédients"
+              type="text"
+              class="button first-button"
+            />
+            <div class="dropdown first-dropdown">
+              <i class="fa-solid fa-angle-down dropdown-arrow"></i>
+            </div>
+          </div>
+          <div class="ingredient-list-container list-container">
+            <ul class="ingredient-list"></ul>
+          </div>
+        </div>
+
+        <div class="button-container">
+          <div class="dropdown-flex">
+            <input
+              placeholder="Appareils"
+              type="text"
+              class="button second-button"
+            />
+            <div class="dropdown second-dropdown">
+              <i class="fa-solid fa-angle-down dropdown-arrow"></i>
+            </div>
+          </div>
+        </div>
+        <div class="button-container">
+          <div class="dropdown-flex">
+            <input
+              placeholder="Ustensiles"
+              type="text"
+              class="button third-button"
+            />
+            <div class="dropdown third-dropdown">
+              <i class="fa-solid fa-angle-down dropdown-arrow"></i>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <section class="cards">
-
-      </section>
-
+      <section class="cards"></section>
     </main>
 
     <script type="module" src="./index.mjs"></script>

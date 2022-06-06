@@ -1,1 +1,0 @@
-dropdowns = document.querySelectorAll('.dropdown')

@@ -108,5 +108,6 @@ export function cardFactory (data) {
     return cardDOM
   }
 
+
   return { ...data, getCardDOM }
 }
