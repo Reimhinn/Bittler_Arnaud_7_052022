@@ -1,6 +1,5 @@
 tout faire à base de module :
 
-ouvrir qu'un dropdown à la fois
 bootstrap
 scroll y
 créer autre branche avant de commencer le filtre
