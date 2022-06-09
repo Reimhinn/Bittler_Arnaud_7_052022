@@ -1,9 +1,7 @@
 tout faire à base de module :
 
-changer le placholder on click sur les drowdown
+ouvrir qu'un dropdown à la fois
 bootstrap
 scroll y
-ranger les module
-faires les tags/dropdown
 créer autre branche avant de commencer le filtre
 faire le 2 versions du filtre

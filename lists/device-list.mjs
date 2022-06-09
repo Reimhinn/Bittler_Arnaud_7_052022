@@ -1,4 +1,6 @@
-import { listFactory } from "../factory/list.mjs"
+import { listFactory } from '../factory/list.mjs'
+
+
 
 export function displayDeviceList (data) {
   const deviceListContainer = document.querySelector('.device-list-container')
@@ -13,15 +15,18 @@ export function displayDeviceList (data) {
     '.device-button-container'
   )
 
+
   let deviceDisplayValue = window.getComputedStyle(deviceListContainer).display
 
   if (deviceDisplayValue === 'none') {
     deviceListContainer.style.display = 'block'
     secondButton.style.width = '40vw'
     deviceButtonContainer.style.width = '40vw'
+    secondButton.placeholder = 'Rechercher un appareil'
   } else {
     deviceListContainer.style.display = 'none'
     secondButton.style.width = '110px'
     deviceButtonContainer.style.width = '150px'
+    secondButton.placeholder = 'Appareils'
   }
 }
