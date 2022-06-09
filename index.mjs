@@ -1,8 +1,8 @@
 import recipes from './recipes.mjs'
-import { cardFactory } from './card.mjs'
-import { listFactory } from './list.mjs'
-import { displayIngredientList } from './list.mjs'
-import { displayDeviceList } from './list.mjs'
+import { cardFactory } from './factory/card.mjs'
+import { listFactory } from './factory/list.mjs'
+import { displayIngredientList } from './lists/ingredient-list.mjs'
+import { displayDeviceList } from './lists/device-list.mjs'
 
 const cards = document.querySelector('.cards')
 
