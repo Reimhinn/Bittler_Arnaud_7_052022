@@ -36,7 +36,7 @@ export function openUstensils () {
   ustensilsListContainer.style.display = 'block'
   thirdButton.style.width = '40vw'
   ustensilsButtonContainer.style.width = '40vw'
-  thirdButton.placeholder = 'Rechercher un ustensiles'
+  thirdButton.placeholder = 'Rechercher un ustensile'
 }
 
 export function closeUstensils () {

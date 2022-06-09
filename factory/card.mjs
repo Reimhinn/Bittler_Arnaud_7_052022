@@ -17,11 +17,19 @@ export function cardFactory (data) {
     const cardBody = document.createElement('div')
     cardBody.classList.add('card-body')
 
+    const cardCol = document.createElement('div')
+    cardCol.classList.add('col-xl-4')
+    cardCol.classList.add('col-md-6')
+
+
+
+    cardCol.appendChild(cardDOM)
+
+
     cardDOM.appendChild(cardTop)
     cardDOM.appendChild(cardBody)
 
     const imgContainer = document.createElement('img')
-    imgContainer.src = 'https://via.placeholder.com/402x174/'
     cardTop.appendChild(imgContainer)
 
     const cardBodyLeft = document.createElement('div')
@@ -105,7 +113,7 @@ export function cardFactory (data) {
 
     cardInstructions.textContent = description
 
-    return cardDOM
+    return cardCol
   }
 
 

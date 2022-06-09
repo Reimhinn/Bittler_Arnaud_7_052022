@@ -1,6 +1,8 @@
 tout faire à base de module :
 
-bootstrap
+responsive
 scroll y
 créer autre branche avant de commencer le filtre
 faire le 2 versions du filtre
+
+réajustements css et globaux

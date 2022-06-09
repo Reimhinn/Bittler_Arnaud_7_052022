@@ -4,7 +4,6 @@ header {
 
 li {
   cursor: pointer;
-  padding: 3px 0px;
   font-size: 14px;
 }
 
@@ -102,7 +101,6 @@ li:hover {
 .first-button, .first-button:focus, .first-dropdown {
   background-color :#3282F7;
   border-color: #3282F7;
-  /* width: 40vw; */
 }
 
 .second-button, .second-dropdown {
@@ -133,14 +131,28 @@ li:hover {
 
 .list-container {
   width: 40vw;
-  height: 43vh;
-  overflow: hidden;
+  height: 30vh;
   position: absolute;
   top: 46px;
   z-index: 10;
   padding-top: 15px;
-  columns: 3;
   display: none;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.lists {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.4rem;
+}
+
+@media screen and (max-width: 992px) {
+  .lists {grid-template-columns: repeat(2, 1fr);}
+}
+
+@media screen and (max-width: 768px) {
+  .lists {grid-template-columns: repeat(1, 1fr);}
 }
 
 .ingredient-list-container {
@@ -158,24 +170,19 @@ li:hover {
 
 .device-list-container {
   background-color: #68D9A4;
+  height: 18vh;
 }
 
 .ustensils-list-container {
   background-color: #ED6454;
 }
 
-.cards {
-  display: flex;
-  flex-wrap: wrap ;
-}
-
 .card {
   margin-top: 40px;
-  margin-right: 40px;
   height: 350px;
-  width: calc(33% - 23px);
   transition: all 250ms;
 }
+
 
 .card:nth-child(3n+0) {
   margin-right: 0;
@@ -263,5 +270,3 @@ li:hover {
 .quantity, .unit {
   font-weight: 500;
 }
-
-
