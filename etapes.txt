@@ -1,13 +1,9 @@
 tout faire à base de module :
 
+changer le placholder on click sur les drowdown
+bootstrap
+scroll y
+ranger les module
 faires les tags/dropdown
 créer autre branche avant de commencer le filtre
 faire le 2 versions du filtre
-faire le responsive
-
-
-questions :
-
-scroll y ?
-responsive ?
-fetch ?

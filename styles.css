@@ -74,16 +74,13 @@ li:hover {
   display: flex;
   flex-direction: column;
   margin-left: 7px;
+  position: relative;
 }
 
 .button-container:nth-child(1) {
   margin-left: 0;
 }
 
-.ingredient-button-container {
-  /* width: 40vw; */
-  position: relative;
-}
 
 .button {
   border-radius: 0px;
@@ -157,6 +154,10 @@ li:hover {
 
 .ingredient-list:nth-child(1) {
   margin-left: -13px;
+}
+
+.device-list-container {
+  background-color: #68D9A4;
 }
 
 .cards {
