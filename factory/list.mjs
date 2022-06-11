@@ -20,6 +20,7 @@ export function listFactory (data) {
       if (!ingredientArray.includes(ingredientObject.ingredient)) {
         ingredientArray.push(ingredientObject.ingredient)
         let ingredientListElement = document.createElement('li')
+        ingredientListElement.classList.add('ingredient-li')
         ingredientListElement.textContent += ingredientObject.ingredient
         ingredientList.appendChild(ingredientListElement)
       }

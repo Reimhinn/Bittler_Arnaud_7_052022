@@ -74,3 +74,10 @@ document.querySelectorAll('.button').forEach(btn => {
     }
   })
 })
+
+
+// document.querySelectorAll('.ingredient-list').forEach(li =>
+//   li.addEventListener('click', event => {
+//     let value = event.target.textContent
+//   })
+// )

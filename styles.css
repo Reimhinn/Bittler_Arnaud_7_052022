@@ -2,6 +2,10 @@ header {
   text-align: center;
 }
 
+ul {
+  list-style-type: none;
+}
+
 li {
   cursor: pointer;
   font-size: 14px;
@@ -63,7 +67,6 @@ li:hover {
 
 .buttons-container {
   margin-top: 22px;
-  margin-bottom: -20px;
   color: white;
   display: flex;
   max-height: 40vh;
@@ -178,7 +181,7 @@ li:hover {
 }
 
 .card {
-  margin-top: 40px;
+  margin-top: 24px;
   height: 350px;
   transition: all 250ms;
 }
