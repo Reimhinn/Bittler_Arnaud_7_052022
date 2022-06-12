@@ -35,6 +35,7 @@ export function listFactory (data) {
     if (!deviceArray.includes(appliance)) {
       deviceArray.push(appliance)
       let deviceListElement = document.createElement('li')
+      deviceListElement.classList.add('device-li')
       deviceListElement.textContent = appliance
       deviceList.appendChild(deviceListElement)
     }
@@ -50,7 +51,8 @@ export function listFactory (data) {
       if (!ustensilsArray.includes(ustensil)) {
         ustensilsArray.push(ustensil)
         let ustensilListElement = document.createElement('li')
-        ustensilListElement.textContent += ustensil.charAt(0).toUpperCase() + ustensil.slice(1)
+        ustensilListElement.classList.add('ustensil-li')
+        ustensilListElement.textContent += ustensil
         ustensilsList.appendChild(ustensilListElement)
       }
 

@@ -1,4 +1,11 @@
-créer autre branche avant de commencer le filtre
-faire le 2 versions du filtre
+les filtres avancés s'adapte aux recettes affichées (regénéré un tableau des recettes actuelle à chaque rechargement de page et s'en servir)
+
+faire le champ de recherche écrit des filtres avancés
+
+pouvoir choisir plusieurs mots en même temps
+
+display and remove filter word selected
+
+faire les 2 versions du filtre
 
 réajustements css et globaux

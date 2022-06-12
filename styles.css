@@ -184,6 +184,7 @@ li:hover {
   margin-top: 24px;
   height: 350px;
   transition: all 250ms;
+  animation: 1000ms forwards apparition;
 }
 
 
@@ -258,6 +259,10 @@ li:hover {
 
 }
 
+.error-message {
+  display: none;
+}
+
 .ingredient, .quantity, .unit {
   margin: 0;
 }
@@ -272,4 +277,9 @@ li:hover {
 
 .quantity, .unit {
   font-weight: 500;
+}
+
+@keyframes apparition {
+  from {opacity: 0;}
+  to {opacity: 1;}
 }

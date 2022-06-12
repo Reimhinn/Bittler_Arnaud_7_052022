@@ -9,12 +9,8 @@ const ingredientButtonContainer = document.querySelector(
 )
 
 export function displayIngredientList (data) {
-  data.forEach(recipe => {
-    let listModel = listFactory(recipe)
-    let ingredientListModelDOM = listModel.getIngredientListDOM()
-    ingredientListContainer.appendChild(ingredientListModelDOM)
-  })
 
+  generateIngredients(data)
 
   let ingredientDisplayValue = window.getComputedStyle(ingredientListContainer)
     .display
@@ -42,4 +38,12 @@ export function closeIngredient () {
   firstButton.style.width = '110px'
   ingredientButtonContainer.style.width = '150px'
   firstButton.placeholder = 'Ingrédients'
+}
+
+export function generateIngredients (data) {
+  data.forEach(recipe => {
+    let listModel = listFactory(recipe)
+    let ingredientListModelDOM = listModel.getIngredientListDOM()
+    ingredientListContainer.appendChild(ingredientListModelDOM)
+  })
 }

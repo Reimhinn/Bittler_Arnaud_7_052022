@@ -8,12 +8,8 @@ const deviceButtonContainer = document.querySelector(
 
 export function displayDeviceList (data) {
 
-  data.forEach(recipe => {
-    let listModel = listFactory(recipe)
-    let deviceListModelDOM = listModel.getDeviceListDOM()
-    deviceListContainer.appendChild(deviceListModelDOM)
-  })
 
+generateDevice(data)
 
 
   let deviceDisplayValue = window.getComputedStyle(deviceListContainer).display
@@ -39,4 +35,14 @@ export function closeDevice () {
   secondButton.style.width = '110px'
   deviceButtonContainer.style.width = '150px'
   secondButton.placeholder = 'Appareils'
+}
+
+
+
+export function generateDevice (data) {
+  data.forEach(recipe => {
+    let listModel = listFactory(recipe)
+    let deviceListModelDOM = listModel.getDeviceListDOM()
+    deviceListContainer.appendChild(deviceListModelDOM)
+  })
 }

@@ -10,12 +10,8 @@ const ustensilsButtonContainer = document.querySelector(
 
 export function displayUstensilsList (data) {
 
-  data.forEach(recipe => {
-    let listModel = listFactory(recipe)
-    let ustensilsListModelDOM = listModel.getUstensilsListDOM()
-    ustensilsListContainer.appendChild(ustensilsListModelDOM)
-  })
 
+  generateUstensils(data)
 
 
   let ustensilsDisplayValue = window.getComputedStyle(ustensilsListContainer)
@@ -46,4 +42,12 @@ export function closeUstensils () {
   thirdButton.style.width = '110px'
   ustensilsButtonContainer.style.width = '150px'
   thirdButton.placeholder = 'Ustensiles'
+}
+
+export function generateUstensils(data) {
+  data.forEach(recipe => {
+    let listModel = listFactory(recipe)
+    let ustensilsListModelDOM = listModel.getUstensilsListDOM()
+    ustensilsListContainer.appendChild(ustensilsListModelDOM)
+  })
 }

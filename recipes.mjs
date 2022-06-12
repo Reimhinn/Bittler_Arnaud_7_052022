@@ -1777,7 +1777,7 @@ const recipes = [
   },
   {
     id: 51,
-    name: 'Madeleine',
+    name: 'Madeleines',
     servings: 4,
     ingredients: [
       {
