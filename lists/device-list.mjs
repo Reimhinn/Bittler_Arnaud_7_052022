@@ -6,11 +6,7 @@ const deviceButtonContainer = document.querySelector(
   '.device-button-container'
 )
 
-export function displayDeviceList (data) {
-
-
-generateDevice(data)
-
+export function displayDeviceList () {
 
   let deviceDisplayValue = window.getComputedStyle(deviceListContainer).display
 

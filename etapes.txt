@@ -1,11 +1,19 @@
-les filtres avancés s'adapte aux recettes affichées (regénéré un tableau des recettes actuelle à chaque rechargement de page et s'en servir)
 
-faire le champ de recherche écrit des filtres avancés
+afficher ou supprimer le mot filtré selectionné
 
 pouvoir choisir plusieurs mots en même temps
 
-display and remove filter word selected
+trouver une nouvelle solution pour le reset du tableau
+
+
+///////     ///////     ///////
+
 
 faire les 2 versions du filtre
 
 réajustements css et globaux
+
+faire la fiche d'investigation
+
+
+mentorat :

@@ -1,6 +1,10 @@
-let ingredientArray = []
 let deviceArray = []
 let ustensilsArray = []
+let ingredientArray = []
+
+function emptyIngredientArray() {
+  ingredientArray = []
+}
 
 export function listFactory (data) {
   const {
@@ -13,12 +17,17 @@ export function listFactory (data) {
     ustensils
   } = data
 
+
   function getIngredientListDOM () {
+
     let ingredientList = document.querySelector('.ingredient-list')
 
+
     ingredients.forEach(ingredientObject => {
+
       if (!ingredientArray.includes(ingredientObject.ingredient)) {
         ingredientArray.push(ingredientObject.ingredient)
+
         let ingredientListElement = document.createElement('li')
         ingredientListElement.classList.add('ingredient-li')
         ingredientListElement.textContent += ingredientObject.ingredient
@@ -31,6 +40,7 @@ export function listFactory (data) {
 
   function getDeviceListDOM () {
     let deviceList = document.querySelector('.device-list')
+    deviceArray = []
 
     if (!deviceArray.includes(appliance)) {
       deviceArray.push(appliance)
@@ -46,6 +56,7 @@ export function listFactory (data) {
 
   function getUstensilsListDOM () {
     let ustensilsList = document.querySelector('.ustensils-list')
+    ustensilsArray = []
 
     ustensils.forEach(ustensil => {
       if (!ustensilsArray.includes(ustensil)) {
@@ -57,7 +68,6 @@ export function listFactory (data) {
       }
 
     })
-
     return ustensilsList
   }
 
@@ -68,3 +78,7 @@ export function listFactory (data) {
     getUstensilsListDOM
   }
 }
+
+export default emptyIngredientArray
+// export default ingredientArray
+// export default ingredientArray

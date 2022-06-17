@@ -3,14 +3,15 @@ import { listFactory } from '../factory/list.mjs'
 const ingredientListContainer = document.querySelector(
   '.ingredient-list-container'
 )
+const ingredientList = document.querySelector('.ingredient-list')
+
 const firstButton = document.querySelector('.first-button')
 const ingredientButtonContainer = document.querySelector(
   '.ingredient-button-container'
 )
 
-export function displayIngredientList (data) {
 
-  generateIngredients(data)
+export function displayIngredientList () {
 
   let ingredientDisplayValue = window.getComputedStyle(ingredientListContainer)
     .display
@@ -45,5 +46,9 @@ export function generateIngredients (data) {
     let listModel = listFactory(recipe)
     let ingredientListModelDOM = listModel.getIngredientListDOM()
     ingredientListContainer.appendChild(ingredientListModelDOM)
+
+    // let ingredientObject = listModel.ingredientArray
+    // ingredientObject.forEach(ingredient => if(!ingredientArray))
   })
+
 }

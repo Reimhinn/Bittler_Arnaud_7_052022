@@ -134,7 +134,8 @@ li:hover {
 
 .list-container {
   width: 40vw;
-  height: 30vh;
+  height: auto;
+  max-height: 30vh;
   position: absolute;
   top: 46px;
   z-index: 10;
@@ -173,7 +174,6 @@ li:hover {
 
 .device-list-container {
   background-color: #68D9A4;
-  height: 18vh;
 }
 
 .ustensils-list-container {

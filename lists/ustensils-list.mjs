@@ -8,11 +8,7 @@ const ustensilsButtonContainer = document.querySelector(
   '.ustensils-button-container'
 )
 
-export function displayUstensilsList (data) {
-
-
-  generateUstensils(data)
-
+export function displayUstensilsList () {
 
   let ustensilsDisplayValue = window.getComputedStyle(ustensilsListContainer)
     .display
