@@ -1,17 +1,9 @@
-
-afficher ou supprimer le mot filtré selectionné
-
-pouvoir choisir plusieurs mots en même temps
-
-trouver une nouvelle solution pour le reset du tableau
-
-
 ///////     ///////     ///////
 
 
-faire les 2 versions du filtre
+réajustements css et refactoring global
 
-réajustements css et globaux
+faire les 2 versions du filtre
 
 faire la fiche d'investigation
 

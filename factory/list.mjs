@@ -1,9 +1,23 @@
-let deviceArray = []
-let ustensilsArray = []
-let ingredientArray = []
+export let deviceArray = []
+export let ustensilsArray = []
+export let ingredientArray = []
 
-function emptyIngredientArray() {
+export function emptyIngredientArray() {
   ingredientArray = []
+}
+
+export function emptyDeviceArray() {
+  deviceArray = []
+}
+
+export function emptyUstensilArray() {
+  ustensilsArray = []
+}
+
+export function emptyAllArray() {
+  emptyIngredientArray()
+  emptyDeviceArray()
+  emptyUstensilArray()
 }
 
 export function listFactory (data) {
@@ -40,7 +54,6 @@ export function listFactory (data) {
 
   function getDeviceListDOM () {
     let deviceList = document.querySelector('.device-list')
-    deviceArray = []
 
     if (!deviceArray.includes(appliance)) {
       deviceArray.push(appliance)
@@ -56,7 +69,6 @@ export function listFactory (data) {
 
   function getUstensilsListDOM () {
     let ustensilsList = document.querySelector('.ustensils-list')
-    ustensilsArray = []
 
     ustensils.forEach(ustensil => {
       if (!ustensilsArray.includes(ustensil)) {
@@ -79,6 +91,7 @@ export function listFactory (data) {
   }
 }
 
-export default emptyIngredientArray
+
 // export default ingredientArray
-// export default ingredientArray
+// export default deviceArray
+// export default ustensilsArray

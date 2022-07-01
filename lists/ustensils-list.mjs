@@ -47,3 +47,4 @@ export function generateUstensils(data) {
     ustensilsListContainer.appendChild(ustensilsListModelDOM)
   })
 }
+

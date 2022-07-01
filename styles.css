@@ -57,6 +57,7 @@ li:hover {
     font-size: 12px;
     border-radius: 5px;
     padding: 12px;
+    margin-right: 10px;
 }
 
 .delete-cross {
@@ -172,11 +173,11 @@ li:hover {
   margin-left: -13px;
 }
 
-.device-list-container {
+.device-list-container, .device-selected {
   background-color: #68D9A4;
 }
 
-.ustensils-list-container {
+.ustensils-list-container, .ustensil-selected {
   background-color: #ED6454;
 }
 
