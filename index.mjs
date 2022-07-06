@@ -53,15 +53,15 @@ const dropdowns = document.querySelectorAll('.dropdown')
 dropdowns.forEach(dropdown => {
   dropdown.addEventListener('click', event => {
     if (event.target.classList.contains('first-dropdown')) {
-      displayIngredientList(recipes)
+      displayIngredientList(actualRecipesArray)
       closeUstensils()
       closeDevice()
     } else if (event.target.classList.contains('second-dropdown')) {
-      displayDeviceList(recipes)
+      displayDeviceList(actualRecipesArray)
       closeIngredient()
       closeUstensils()
     } else if (event.target.classList.contains('third-dropdown')) {
-      displayUstensilsList(recipes)
+      displayUstensilsList(actualRecipesArray)
       closeIngredient()
       closeDevice()
     }
@@ -71,15 +71,15 @@ dropdowns.forEach(dropdown => {
 document.querySelectorAll('.dropdown-arrow').forEach(arrow => {
   arrow.addEventListener('click', event => {
     if (event.target.parentNode.classList.contains('first-dropdown')) {
-      displayIngredientList(recipes)
+      displayIngredientList(actualRecipesArray)
       closeUstensils()
       closeDevice()
     } else if (event.target.parentNode.classList.contains('second-dropdown')) {
-      displayDeviceList(recipes)
+      displayDeviceList(actualRecipesArray)
       closeIngredient()
       closeUstensils()
     } else if (event.target.parentNode.classList.contains('third-dropdown')) {
-      displayUstensilsList(recipes)
+      displayUstensilsList(actualRecipesArray)
       closeIngredient()
       closeDevice()
     }
@@ -89,15 +89,15 @@ document.querySelectorAll('.dropdown-arrow').forEach(arrow => {
 document.querySelectorAll('.button').forEach(btn => {
   btn.addEventListener('click', event => {
     if (event.target.classList.contains('first-button')) {
-      displayIngredientList(recipes)
+      displayIngredientList(actualRecipesArray)
       closeUstensils()
       closeDevice()
     } else if (event.target.classList.contains('second-button')) {
-      displayDeviceList(recipes)
+      displayDeviceList(actualRecipesArray)
       closeIngredient()
       closeUstensils()
     } else if (event.target.classList.contains('third-button')) {
-      displayUstensilsList(recipes)
+      displayUstensilsList(actualRecipesArray)
       closeIngredient()
       closeDevice()
     }
