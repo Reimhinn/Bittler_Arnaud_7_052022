@@ -46,6 +46,9 @@ export function generateIngredients (data) {
     let listModel = listFactory(recipe)
     let ingredientListModelDOM = listModel.getIngredientListDOM()
     ingredientListContainer.appendChild(ingredientListModelDOM)
+
+    // let ingredientObject = listModel.ingredientArray
+    // ingredientObject.forEach(ingredient => if(!ingredientArray))
   })
 
 }

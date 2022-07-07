@@ -12,17 +12,20 @@ import {
 } from './factory/list.mjs'
 import {
   displayIngredientList,
-  generateIngredients
+  generateIngredients,
+  openIngredient
 } from './lists/ingredient-list.mjs'
 import {
   closeDevice,
   displayDeviceList,
-  generateDevice
+  generateDevice,
+  openDevice
 } from './lists/device-list.mjs'
 import {
   closeUstensils,
   displayUstensilsList,
-  generateUstensils
+  generateUstensils,
+  openUstensils
 } from './lists/ustensils-list.mjs'
 import { closeIngredient } from './lists/ingredient-list.mjs'
 
@@ -53,15 +56,15 @@ const dropdowns = document.querySelectorAll('.dropdown')
 dropdowns.forEach(dropdown => {
   dropdown.addEventListener('click', event => {
     if (event.target.classList.contains('first-dropdown')) {
-      displayIngredientList(actualRecipesArray)
+      displayIngredientList()
       closeUstensils()
       closeDevice()
     } else if (event.target.classList.contains('second-dropdown')) {
-      displayDeviceList(actualRecipesArray)
+      displayDeviceList()
       closeIngredient()
       closeUstensils()
     } else if (event.target.classList.contains('third-dropdown')) {
-      displayUstensilsList(actualRecipesArray)
+      displayUstensilsList()
       closeIngredient()
       closeDevice()
     }
@@ -71,15 +74,15 @@ dropdowns.forEach(dropdown => {
 document.querySelectorAll('.dropdown-arrow').forEach(arrow => {
   arrow.addEventListener('click', event => {
     if (event.target.parentNode.classList.contains('first-dropdown')) {
-      displayIngredientList(actualRecipesArray)
+      displayIngredientList()
       closeUstensils()
       closeDevice()
     } else if (event.target.parentNode.classList.contains('second-dropdown')) {
-      displayDeviceList(actualRecipesArray)
+      displayDeviceList()
       closeIngredient()
       closeUstensils()
     } else if (event.target.parentNode.classList.contains('third-dropdown')) {
-      displayUstensilsList(actualRecipesArray)
+      displayUstensilsList()
       closeIngredient()
       closeDevice()
     }
@@ -89,15 +92,15 @@ document.querySelectorAll('.dropdown-arrow').forEach(arrow => {
 document.querySelectorAll('.button').forEach(btn => {
   btn.addEventListener('click', event => {
     if (event.target.classList.contains('first-button')) {
-      displayIngredientList(actualRecipesArray)
+      openIngredient()
       closeUstensils()
       closeDevice()
     } else if (event.target.classList.contains('second-button')) {
-      displayDeviceList(actualRecipesArray)
+      openDevice()
       closeIngredient()
       closeUstensils()
     } else if (event.target.classList.contains('third-button')) {
-      displayUstensilsList(actualRecipesArray)
+      openUstensils()
       closeIngredient()
       closeDevice()
     }
@@ -428,6 +431,7 @@ document.querySelector('.search-bar').addEventListener('input', e => {
           )
     )
 
+    actualRecipesArray = newArray
     showCards(newArray)
     if (newArray.length === 0) {
       cards.innerHTML === ''
