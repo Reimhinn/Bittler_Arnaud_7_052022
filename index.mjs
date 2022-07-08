@@ -47,6 +47,7 @@ function showCards (recipesArray) {
   })
   closeAllLists()
   generateAllFilters(recipesArray)
+  actualRecipesArray = recipesArray
 }
 
 showCards(recipes)
@@ -193,6 +194,15 @@ function generateAllFilters (data) {
   liListener()
 }
 
+function deleteAllFilters () {
+  document.querySelectorAll('.delete-cross').forEach(cross => {
+    cross.parentNode.remove()
+    chosenIngredients = []
+    chosenDevices = []
+    chosenUstensils = []
+  })
+}
+
 function liIngredientListener () {
   document.querySelectorAll('.ingredient-li').forEach(li => {
     li.addEventListener('click', event => {
@@ -267,13 +277,6 @@ function liDeviceListener () {
         document.querySelector('.buttons-container')
       )
 
-      // let newArray = []
-      // for (let i = 0; i <= recipes.length - 1; i++) {
-      //   let recipe = recipes[i]
-      //   if (recipe.appliance === deviceToFliter) {
-      //     newArray.push(recipe)
-      //   }
-      // }
       actualRecipesArray = generateArrayFromDevicesSelected()
       showCards(actualRecipesArray)
       deleteCrossListener()
@@ -328,7 +331,6 @@ function liUstensilListener () {
 
 function generateArrayFromIngredientsSelected () {
   let newArray = []
-  console.log(chosenIngredients)
   if (chosenIngredients.length !== 0) {
     chosenIngredients.forEach(chosenIngredient => {
       newArray = actualRecipesArray.filter(recipe =>
@@ -381,7 +383,6 @@ function generateArrayFromWordSelected () {
       )
     )
   })
-  console.log(chosenIngredients)
 
   chosenDevices.forEach(chosenDevice => {
     newArray = recipes.filter(recipe => recipe.appliance === chosenDevice)
@@ -411,26 +412,32 @@ function liListener () {
   liUstensilListener()
 }
 
-document.querySelector('.search-bar').addEventListener('input', e => {
+function searchBarListener (element) {
   let errorMessage = document.querySelector('.error-message')
-  let searchString = e.target.value
+  let searchString = element.value
+  let newArray = []
   if (searchString.length >= 3) {
     errorMessage.style.display = 'none'
-    let newArray = recipes.filter(
-      recipe =>
-        recipe.name.toUpperCase().includes(searchString.toUpperCase()) ||
-        recipe.description
-          .toUpperCase()
-          .includes(
-            searchString.toUpperCase() ||
-              recipe.ingredients.some(
-                ingredientObject.ingredient
-                  .toUpperCase()
-                  .includes(searchString.toUpperCase())
-              )
-          )
-    )
 
+    for (let recipe of recipes) {
+      if (
+        recipe.name.toUpperCase().indexOf(searchString.toUpperCase()) > -1 ||
+        recipe.description.toUpperCase().indexOf(searchString.toUpperCase()) >
+          -1
+      ) {
+        newArray.push(recipe)
+      } else {
+        for (let ingredientObject of recipe.ingredients) {
+          if (
+            ingredientObject.ingredient
+              .toUpperCase()
+              .indexOf(searchString.toUpperCase()) > -1
+          ) {
+            newArray.push(recipe)
+          }
+        }
+      }
+    }
     actualRecipesArray = newArray
     showCards(newArray)
     if (newArray.length === 0) {
@@ -441,8 +448,17 @@ document.querySelector('.search-bar').addEventListener('input', e => {
   }
   if (searchString.length < 3 && cards.childNodes.length !== recipes.length) {
     showCards(recipes)
+    newArray = recipes
     errorMessage.style.display = 'none'
   }
+
+  deleteAllFilters()
+}
+
+const searchBar = document.querySelector('.search-bar')
+
+searchBar.addEventListener('input', e => {
+  searchBarListener(e.target)
 })
 
 function deleteCrossListener () {
@@ -455,7 +471,6 @@ function deleteCrossListener () {
         let wordIndex = chosenIngredients.indexOf(targetWord)
         if (wordIndex !== -1) {
           chosenIngredients.splice(wordIndex, 1)
-          console.log(wordIndex)
         }
       } else if (event.target.classList.contains('device-cross')) {
         let wordIndex = chosenDevices.indexOf(targetWord)
@@ -468,6 +483,8 @@ function deleteCrossListener () {
           chosenUstensils.splice(wordIndex, 1)
         }
       }
+
+      searchBar.value = ''
 
       event.target.parentNode.remove()
 

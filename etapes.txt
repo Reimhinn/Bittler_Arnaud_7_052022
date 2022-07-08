@@ -1,5 +1,1 @@
-régler le problème de cas d'utilisation (conflit barre de recherche et recherche avancée)
-
-faire les 2 versions de la barre de recherche (utiliser for OF et non for)
-
-faire la fiche d'investigation
+mettre commentaires
