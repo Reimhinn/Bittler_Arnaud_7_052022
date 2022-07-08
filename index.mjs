@@ -416,28 +416,25 @@ function searchBarListener (element) {
   let errorMessage = document.querySelector('.error-message')
   let searchString = element.value
   let newArray = []
+
   if (searchString.length >= 3) {
     errorMessage.style.display = 'none'
 
-    for (let recipe of recipes) {
-      if (
-        recipe.name.toUpperCase().indexOf(searchString.toUpperCase()) > -1 ||
-        recipe.description.toUpperCase().indexOf(searchString.toUpperCase()) >
-          -1
-      ) {
-        newArray.push(recipe)
-      } else {
-        for (let ingredientObject of recipe.ingredients) {
-          if (
-            ingredientObject.ingredient
-              .toUpperCase()
-              .indexOf(searchString.toUpperCase()) > -1
-          ) {
-            newArray.push(recipe)
-          }
-        }
-      }
-    }
+    let newArray = recipes.filter(
+      recipe =>
+        recipe.name.toUpperCase().includes(searchString.toUpperCase()) ||
+        recipe.description
+          .toUpperCase()
+          .includes(
+            searchString.toUpperCase() ||
+              recipe.ingredients.some(
+                ingredientObject.ingredient
+                  .toUpperCase()
+                  .includes(searchString.toUpperCase())
+              )
+          )
+    )
+
     actualRecipesArray = newArray
     showCards(newArray)
     if (newArray.length === 0) {
