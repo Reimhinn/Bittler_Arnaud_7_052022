@@ -208,8 +208,6 @@ function liIngredientListener () {
     li.addEventListener('click', event => {
       let ingredientToFliter = event.target.textContent
 
-      // let newArray = actualRecipesArray.filter(recipe => recipe.ingredients.some(ingredientObject => ingredientObject.ingredient === ingredientToFliter))
-
       chosenIngredients.push(ingredientToFliter)
 
       const wordSelectedContainer = document.createElement('span')
@@ -232,16 +230,6 @@ function liIngredientListener () {
         document.querySelector('.buttons-container')
       )
 
-      // let newArray = []
-      // for (let i = 0; i <= actualRecipesArray.length - 1; i++) {
-      //   let recipe = actualRecipesArray[i]
-      //   for (let j = 0; j <= recipe.ingredients.length - 1; j++) {
-      //     if (recipe.ingredients[j].ingredient === ingredientToFliter) {
-      //       newArray.push(recipe)
-      //     }
-      //   }
-      // }
-
       actualRecipesArray = generateArrayFromIngredientsSelected()
       showCards(actualRecipesArray)
       deleteCrossListener()
@@ -253,7 +241,6 @@ function liDeviceListener () {
   document.querySelectorAll('.device-li').forEach(li =>
     li.addEventListener('click', event => {
       let deviceToFliter = event.target.textContent
-      // let newArray = recipes.filter(recipe => recipe.appliance === deviceToFliter))
 
       chosenDevices.push(deviceToFliter)
 
@@ -288,7 +275,6 @@ function liUstensilListener () {
   document.querySelectorAll('.ustensil-li').forEach(li =>
     li.addEventListener('click', event => {
       let ustensilToFliter = event.target.textContent
-      // let newArray = recipes.filter(recipe => recipe.ustensils.includes(ustensilToFliter))
 
       chosenUstensils.push(ustensilToFliter)
 
@@ -312,15 +298,6 @@ function liUstensilListener () {
         document.querySelector('.buttons-container')
       )
 
-      // let newArray = []
-      // for (let i = 0; i <= recipes.length - 1; i++) {
-      //   let recipe = recipes[i]
-      //   for (let j = 0; j <= recipe.ustensils.length - 1; j++) {
-      //     if (recipe.ustensils[j] === ustensilToFliter) {
-      //       newArray.push(recipe)
-      //     }
-      //   }
-      // }
 
       actualRecipesArray = generateArrayFromUstensilsSelected()
       showCards(actualRecipesArray)
