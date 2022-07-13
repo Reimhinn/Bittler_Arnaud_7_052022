@@ -90,8 +90,3 @@ export function listFactory (data) {
     getUstensilsListDOM
   }
 }
-
-
-// export default ingredientArray
-// export default deviceArray
-// export default ustensilsArray
